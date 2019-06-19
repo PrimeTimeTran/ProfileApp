@@ -1,8 +1,10 @@
-# Profile App
+# Week 1: Hello World in React Native
 
 ## **Introduction 🌟**
 
 We're going to build our first mobile app 📱 using [React Native](https://facebook.github.io/react-native/). We'll be using [Expo](https://expo.io/) to make getting started quick. Our app will help us to share information 📋 about ourselves to our friends 🍻🤗💁.
+
+![pwd](./assets/images/3e.png)
 
 ### Features 🥅🥇
 
@@ -11,7 +13,6 @@ We're going to build our first mobile app 📱 using [React Native](https://face
 - [ ] User can see our birthday
 - [ ] User can see our profile picture
 - [ ] User can see where we currently live
-- [ ] User can see a short description about us
 
 ### Learning Objectives ✍️📚📝 📈🙌 ️
 
@@ -349,9 +350,9 @@ export default function App() {
 ```
 
 ![pwd](./assets/images/3d.png)
-We grabbed `Image` from React Native. We nested it inside our single `View` as a child. `Image` has two sibling `Text`s. We also passed `Image` a new type of property we haven't seen before, `source`. What datatype is the property we sent to to Image? What is the shape of it...?
+We grabbed `Image` from React Native. We nested it inside our single `View` as a child. `Image` has two sibling `Text`s. We also passed `Image` a new type of property we haven't seen before, `source`. What datatype is the property we sent to to Image? Can you describe it's shape?
 
-**E)** Let's add all our other details
+**E)** Add other details about ourselves
 
 ```jsx
 return (
@@ -360,17 +361,17 @@ return (
         Name:
       </Text>
       <Text style={styles.nameStyle}>
-        Loi Tran
+        18
       </Text>
       <Image
         style={{width: 250, height: 250}}
         source={{uri: 'https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-9/14633014_10154745913714359_6100717154322258576_n.jpg?_nc_cat=105&_nc_oc=AQkZMdfzPzbxiGhHk7rKdxZuqxfru6om8cUXLPi4elQn9yH-qtyHT1jMm8_wF2g-kp8&_nc_ht=scontent.fsgn2-1.fna&oh=0a07f00a2483ba1090d5010e8cd1eb64&oe=5DC1478A'}}
       />
       <Text style={styles.labelStyle}>
-        Age: 18
+        Age:
       </Text>
       <Text style={styles.nameStyle}>
-        Loi Tran
+        18
       </Text>      
       <Text style={styles.labelStyle}>
         Birthday:
@@ -389,21 +390,40 @@ return (
 ```
 
 ![pwd](./assets/images/3e.png)
-We've now got a beautiful application to help people get to know us. Amazing 🍾🎉
+We've now got a beautiful application to help people get to know us. Amazing 🍾🎉.
 
 ---
 
 > Key Points 🔑📝
 
-- We can combine components to create visual elements in our app like labels, text, and images.
-- We can change properties as necessary to change the behavior of the components. 
+- We can nest components to create visual elements in our app like labels, text, and images.
+- We can pass properties as necessary to components to change their behavior.
+- We can see that different components can receive different props, think about the responsibilities of `source` and `style`.
 
 ---
 
 #  Review 🤹👨🏻‍🏫🥇🏆🙋‍🧘🏻
 
-- Your app is just a folder 🗂on our computer containing folders 📂 & files 📄📑 which have different responsibilities 🗝🎉.
+- Any app consists of a folder 🗂on our computer containing folders 📂 & files 📄📑 which have different responsibilities 🗝🎉.
 
-- `App.js` will be in every application you build. Looking at it's parts ⚙ will help you understand how to build others.
+- `App.js` will be a component in every application we build. Looking at it's parts ⚙ helps us understand the basic composition of components.
+
 - `App.js` will  one day become the [parent component](https://stackoverflow.com/questions/44092105/what-is-the-difference-between-child-and-parent-component-in-angular-2) of all other components in our applications. This will happen through nesting. Some components will be parents 👫 and others will be their children 👨‍👩‍👧‍👦.
+
 - Understand some components are classified as [functional](https://www.robinwieruch.de/react-function-component/). Like functions, `functional components` accept props/params and will behavior differently on said props/params.
+
+### Completed Features 🥅🥇
+
+- [X] User can see our name
+- [X] User can see our age
+- [X] User can see our birthday
+- [X] User can see our profile picture
+- [X] User can see where we currently live
+
+### Rockets 🥅🥇
+
+- [X] User can
+- [X] User can see our age
+- [X] User can see our birthday
+- [X] User can see our profile picture
+- [X] User can see where we currently live
