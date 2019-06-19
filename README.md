@@ -420,10 +420,12 @@ We've now got a beautiful application to help people get to know us. Amazing �
 - [X] User can see our profile picture
 - [X] User can see where we currently live
 
-### Rockets 🥅🥇
+### Rockets 🔥🚀
 
-- [X] User can
-- [X] User can see our age
-- [X] User can see our birthday
-- [X] User can see our profile picture
-- [X] User can see where we currently live
+- [ ] Make this your hello world by adding the text to the top.
+- [ ] Make the avatar circular and give it some additional styling such as borders.
+- [ ] Make name and age appear on the same row.
+- [ ] Space out the 'Hello World', avatar, and descriptions to maximize valuable screenspace.
+
+##### It should look like this
+![pwd](./assets/images/rockets.png)
