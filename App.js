@@ -7,7 +7,7 @@ import {
   StyleSheet,
 } from 'react-native'
 
-const { width, height } = Dimensions.get('window')
+const { width,  } = Dimensions.get('window')
 
 export default function App() {
   return (
@@ -28,8 +28,7 @@ export default function App() {
       />
       <View 
         style={{ 
-          marginTop: 50,
-          width: width * 0.9,
+          width: '100%',
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'space-around'

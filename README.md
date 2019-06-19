@@ -353,7 +353,6 @@ export default function App() {
 We grabbed `Image` from React Native. We nested it inside our single `View` as a child. `Image` has two sibling `Text`s. We also passed `Image` a new type of property we haven't seen before, `source`. What datatype is the property we sent to to Image? Can you describe it's shape?
 
 **E)** Add other details about ourselves
-
 ```jsx
 return (
     <View style={styles.containerStyle}>
@@ -390,14 +389,44 @@ return (
 ```
 
 ![pwd](./assets/images/3e.png)
-We've now got a beautiful application to help people get to know us. Amazing 🍾🎉.
+Now the user knows something about us, amazing 🍾🎉. It seems sorta weird the way name and age are so small yet take up an entire row though. Let's fix this in the next step
+
+**F)** Make name and age fit on the same row. Add the following to the return of the `App` component:
+```jsx
+// ... code ...
+  <View 
+    style={{ 
+      width: '100%',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-around'
+    }}
+  >
+    <Text style={styles.labelStyle}>
+      Name:
+    </Text>
+    <Text style={styles.infoStyle}>
+      Loi Tran
+    </Text>
+    <Text style={styles.labelStyle}>
+      Age: 
+    </Text>
+    <Text style={styles.infoStyle}>
+      18
+    </Text>
+  </View>
+```
+
+![pwd](./assets/images/3f.png)
+
+Sweet, so we now know how to layout things top to bottom as well as left to right. Do you know how we could get it to go bottom to top or right to left? If not, then spend a few minutes [watching this video](https://www.youtube.com/watch?v=-xFF5KF-KpE&t=293s). I watched this myself to learn flexbox a few years ago =)
 
 ---
 
 > Key Points 🔑📝
 
 - We can nest components to create visual elements in our app like labels, text, and images.
-- We can pass properties as necessary to components to change their behavior.
+- We can pass properties as necessary to components to change their behavior/layout.
 - We can see that different components can receive different props, think about the responsibilities of `source` and `style`.
 
 ---
@@ -422,9 +451,8 @@ We've now got a beautiful application to help people get to know us. Amazing �
 
 ### Rockets 🔥🚀
 
-- [ ] Make this your hello world by adding the text to the top.
-- [ ] Make the avatar circular and give it some additional styling such as borders.
-- [ ] Make name and age appear on the same row.
+- [ ] Make this your React Native Hello World by adding this text to the top.
+- [ ] Make the avatar circular and give it some additional styling such as a border.
 - [ ] Space out the 'Hello World', avatar, and descriptions to maximize valuable screenspace.
 
 ##### It should look like this
