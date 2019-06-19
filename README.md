@@ -217,7 +217,9 @@ export default function App() {
         style={{
           fontSize: 30
         }}
-      >Loi Tran</Text>
+      >
+        Loi Tran
+      </Text>
     </View>
   )
 }
