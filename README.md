@@ -402,8 +402,8 @@ We've now got a beautiful application to help people get to know us. Amazing �
 
 #  Review 🤹👨🏻‍🏫🥇🏆🙋‍🧘🏻
 
-- Recognize it's a folder 🗂on our computer containing folders 📂 & files 📄📑 which have different responsibilities 🗝🎉.
+- Your app is just a folder 🗂on our computer containing folders 📂 & files 📄📑 which have different responsibilities 🗝🎉.
 
-- Recognize it's parts ⚙will reflect how other components are built. It will need to import components for use & return 🚪JSX.
-- Recognize it will one day become the [parent component](https://stackoverflow.com/questions/44092105/what-is-the-difference-between-child-and-parent-component-in-angular-2) of all other components in our applications. This will happen through nesting. Some components will be parents 👫 and others will be their children 👨‍👩‍👧‍👦.
-- Recognize that some components are classified as [functional](https://www.robinwieruch.de/react-function-component/). Like functions, the properties/props/params/arguments we pass them will effect their behavior.
+- `App.js` will be in every application you build. Looking at it's parts ⚙ will help you understand how to build others.
+- `App.js` will  one day become the [parent component](https://stackoverflow.com/questions/44092105/what-is-the-difference-between-child-and-parent-component-in-angular-2) of all other components in our applications. This will happen through nesting. Some components will be parents 👫 and others will be their children 👨‍👩‍👧‍👦.
+- Understand some components are classified as [functional](https://www.robinwieruch.de/react-function-component/). Like functions, `functional components` accept props/params and will behavior differently on said props/params.
