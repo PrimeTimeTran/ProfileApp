@@ -28,7 +28,7 @@ No company you work at will expect you to work alone or without the help of reso
 
 > **Tip** 💡: The links provided in the introduction of all lessons will provide valuable information to you in class and your careers. It isn't a bad idea to spend a few minutes reading about these tools to understand how they fit together.
 
-### **Milestone 1 🛣🏃 Create project directory and run application locally using Expo and our Simulator**
+### **Milestone 1 🛣🏃 Create project directory and run application locally using Expo and simulator**
 
 **A)** Open your terminal and navigate to the place you'll want to keep all the apps you'll build in the future saved on your computer. In my case it happens to be:
 
@@ -72,12 +72,14 @@ To get started you can type:
 
 ![pwd](./assets/images/1h.png)
 
+
+---
 > **Tip** 💡: If you run into problems such as the simulator not opening, error messages, etc, refer to the documentation found at [https://docs.expo.io/versions/v33.0.0/introduction/installation/](https://docs.expo.io/versions/v33.0.0/introduction/installation/) and try figuring it out **yourself**. You'll want to know how to do this yourself in the future, trust us. Additionally, a reasonable expectation that your future bosses and teammates will have is that you can **indepdently troubleshoot** problems by **reading publically available documentation** and **following recommended steps**.
 
 ---
 > Key Points 🔑📝
 
-- We now know how to create a new mobile app from the command line. When we run `expo init app-name` Expo creates a folder on our computer  that matches 'app-name' where all the files required for this app are. The **sky** is the limit.
+- We can create a new mobile app from the command line. When we run `expo init app-name` Expo creates a folder on our computer  that matches 'app-name' where all the files required for this app are. The **sky** is the limit.
 
 ---
 
@@ -87,7 +89,6 @@ To get started you can type:
 
 <details>
 <summary>App.js contents</summary>
-<br><br>
 
 ```jsx
 import React from 'react';
@@ -156,9 +157,9 @@ const styles = StyleSheet.create({
 ---
 > Key Points 🔑📝
 
-- We have to import components for use at the top of most files.
-- Our components are functions that return JSX
-- The JSX returned from our components can be nested like HTML & styled with CSS.
+- We can import components for use at the top of most files.
+- We can create components by writing functions which return JSX.
+- We can nest components inside of one another.
 
 ---
 
@@ -166,193 +167,241 @@ const styles = StyleSheet.create({
 
 Let's get going on building that profile page.
 
-**A)** I
+**A)** Show our name on the app:
 
 ```jsx
 export default function App() {
+  // Use your own name
   return (
     <View style={styles.container}>
-      <Text>Please enter the value of the currency you want to confirm</Text>
+      <Text>Loi Tran</Text>
     </View>
   );
 }
 ```
 
+![pwd](./assets/images/3a.png)
+Sweet, now the user can see our name, but this could be improved. How do they know what they're looking at?
 
-**B)** We need a way to grab data from our user. We'll do this by importing a component named `TextInput` from React Native
+**B)** Add a description to our name:
 
 ```jsx
-// ... code ...
-import { TextInput, StyleSheet, Text, View } from 'react-native';
-// ... code ...
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Name:</Text>
+      <Text>Loi Tran</Text>
+    </View>
+  );
+}
 ```
 
-then rendering it in the body of our return
+![pwd](./assets/images/3b.png)
+Now we've got two sibling components, interesting. Our text is quite small. Also, the two pieces of information are fundamentally different. We should treat them so.
+
+**C)** Change the styling of the `Text` components to reflect their purpose.
+
+```jsx
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text
+        style={{
+          fontSize: 50,
+          color: 'grey'
+        }}
+      >
+        Name:
+      </Text>
+      <Text
+        style={{
+          fontSize: 30
+        }}
+      >Loi Tran</Text>
+    </View>
+  )
+}
+```
+
+![pwd](./assets/images/3c.png)
+
+If you see a screen like this you've done well. You've added a child component to `App.js` of `Text`. There are now two `Text` siblings. We've also passed them `style` props, these props affected the way these components behaved in terms of styling.
+
+---
+> **Tip** 💡: We'll show you different syntaxes so you know additional techniques.
+
+---
+
+#### Different Styles 💋👔⌨
+
+<details>
+<summary>Option 1</summary>
+
+```jsx
+import React from 'react'
+import { 
+  View, 
+  Text,
+  Image,
+  StyleSheet,
+} from 'react-native'
+
+export default function App() {
+  return (
+    <View style={styles.containerStyle}>
+      <Text style={styles.labelStyle}>
+        Name:
+      </Text>
+      <Text style={styles.nameStyle}>
+        Loi Tran
+      </Text>
+    </View>
+  )
+}
+
+const styles = StyleSheet.create({
+  containerStyle: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  labelStyle: { 
+    fontSize: 50,
+    color: 'grey' 
+  },
+  nameStyle: {
+    fontSize: 30
+  }
+})
+
+
+```
+
+</details>
+<details>
+<summary>Option 2</summary>
+
+```jsx
+import React from 'react'
+import { 
+  View, 
+  Text,
+  Image,
+  StyleSheet,
+} from 'react-native'
+
+export default function App() {
+  const { labelStyle, containerStyle, nameStyle } = styles
+  return (
+    <View style={containerStyle}>
+      <Text style={labelStyle}>
+        Name:
+      </Text>
+      <Text style={nameStyle}>
+        Loi Tran
+      </Text>
+    </View>
+  )
+}
+
+const styles = StyleSheet.create({
+  containerStyle: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  labelStyle: { 
+    fontSize: 50,
+    color: 'grey' 
+  },
+  nameStyle: {
+    fontSize: 30
+  }
+})
+
+```
+
+</details>
+
+**D)** Add a profile image so the user can see you. Make sure to replace the `uri` part with a publically available image of yourself(I used Facebook).
+
+```jsx
+export default function App() {
+  return (
+    <View style={styles.containerStyle}>
+      <Text style={styles.labelStyle}>
+        Name:
+      </Text>
+      <Text style={styles.nameStyle}>
+        Loi Tran
+      </Text>
+      <Image
+          style={{width: 250, height: 250}}
+          source={{uri: 'https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-9/14633014_10154745913714359_6100717154322258576_n.jpg?_nc_cat=105&_nc_oc=AQkZMdfzPzbxiGhHk7rKdxZuqxfru6om8cUXLPi4elQn9yH-qtyHT1jMm8_wF2g-kp8&_nc_ht=scontent.fsgn2-1.fna&oh=0a07f00a2483ba1090d5010e8cd1eb64&oe=5DC1478A'}}
+        />
+    </View>
+  )
+}
+```
+
+![pwd](./assets/images/3e.png)
+We grabbed `Image` from React Native. We nested it inside our single `View` as a child. `Image` has two sibling `Text`s. We also passed `Image` a new type of property we haven't seen before, `source`. What datatype is the property we sent to to Image? What is the shape of it...?
+
+**E)** Let's add all our other details
 
 ```jsx
 return (
-    <View style={styles.container}>
-      <Text>Please enter the value of the currency you want to confirm</Text>
-      <TextInput />
-    </View>
-);
-```
-
-you should see a screen like this.
-
-
-# **Expectations 🤔**
-
-We imported a new component and nested it within the JSX returned from our component. We expected to see an input. 
-
-##### What happened?
-
-**C)** The answer is that React Native provides very little in terms of default styling for us. We need to pass our `TextInput` component a **style property**. We do so using this syntax. Notice the argument/prop to the style prop is of datatype object.
-
-```jsx
-<TextInput 
-    style={{
-        width: 300,
-        height: 20,
-        borderWidth: 1,
-    }}
-/>
-```
----
-**Different Styles 💋👔⌨**
-<details>
-<summary>Option 1</summary>
-<br><br>
-
-```jsx
-import React from 'react';
-import { 
-  Text, 
-  View,
-  TextInput, 
-  StyleSheet, 
-} from 'react-native';
-
-export default function App() {
-  const containerStyle = styles.containerStyle
-  const inputStyle = styles.inputStyle
-  return (
-    <View style={containerStyle}>
-      <Text>Please enter the value of the currency you want to confirm</Text>
-      <TextInput
-        style={inputStyle}
+    <View style={styles.containerStyle}>
+      <Text style={styles.labelStyle}>
+        Name:
+      </Text>
+      <Text style={styles.nameStyle}>
+        Loi Tran
+      </Text>
+      <Image
+        style={{width: 250, height: 250}}
+        source={{uri: 'https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-9/14633014_10154745913714359_6100717154322258576_n.jpg?_nc_cat=105&_nc_oc=AQkZMdfzPzbxiGhHk7rKdxZuqxfru6om8cUXLPi4elQn9yH-qtyHT1jMm8_wF2g-kp8&_nc_ht=scontent.fsgn2-1.fna&oh=0a07f00a2483ba1090d5010e8cd1eb64&oe=5DC1478A'}}
       />
+      <Text style={styles.labelStyle}>
+        Age: 18
+      </Text>
+      <Text style={styles.nameStyle}>
+        Loi Tran
+      </Text>      
+      <Text style={styles.labelStyle}>
+        Birthday:
+      </Text>
+      <Text style={styles.nameStyle}>
+        July 22th, 2000
+      </Text>
+      <Text style={styles.labelStyle}>
+        Location
+      </Text>
+      <Text style={styles.nameStyle}>
+        Ho Chi Minh City, Vietnam
+      </Text>
     </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  containerStyle: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  inputStyle: {
-    width: 300,
-    height: 20,
-    borderWidth: 1,
-  }
-});
-
+  )
 ```
 
-</details>
-
-<details>
-<summary>Option 2</summary>
-This technique uses  ES6 destructuring. https://www.sitepoint.com/es6-destructuring-assignment/
-<br><br>
-
-```jsx
-import React from 'react';
-import { 
-  Text, 
-  View,
-  TextInput, 
-  StyleSheet, 
-} from 'react-native';
-
-export default function App() {
-  const { containerStyle, inputStyle } = styles
-  return (
-    <View style={containerStyle}>
-      <Text>Please enter the value of the currency you want to confirm</Text>
-      <TextInput
-        style={inputStyle}
-      />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  containerStyle: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  inputStyle: {
-    width: 300,
-    height: 20,
-    borderWidth: 1,
-  }
-});
-
-```
-</details>
-
----
-
-#### Now we see our `TextInput`. **Excellent**
-
-
-What's sorta annoying though is that you have to press the `TextInput` before you can begin typing.
-
-**D)** Auto focus the `TextInput` when the app loads by passing a new prop to it, `autofocus`. Notice the argument/prop to the style prop is of datatype **boolean**.
-
-```jsx
-<TextInput
-    autoFocus // autoFocus === autoFocus={true}
-    style={{
-        width: 300,
-        height: 20,
-        borderWidth: 1,
-    }}
-/>
-```
-
-We should see the `TextInput` automatically focuses on component mount.
-
-
-**E)** We need to make our app smarter though. If we're converting currency we should make it so the user can only enter numbers. Pass it a new prop of `keyboardType`. Notice the argument/prop to the style prop is of datatype string.
-
-```jsx
-<TextInput
-    keyboardType="number-pad" // keyboardType="number-pad" === keyboardType={"number-pad"}
-    autoFocus
-    style={{
-        width: 300,
-        height: 20,
-        borderWidth: 1,
-    }}
-/>
-```
-
+![pwd](./assets/images/3e.png)
+We've now got a beautiful application to help people get to know us. Amazing 🍾🎉
 
 ---
 
 > Key Points 🔑📝
 
-- To use components, we import them at the top of the file from a library. In this case we grabbed `TextInput` from the React Native library.
-- Components take properties. They are passed properties which effect their behavior. We can style, autofocus, and change the type of a keyboard for example. [Read about more TextInput properties](https://facebook.github.io/react-native/docs/textinput.html)
-- Components take properties of various datatypes. String, Boolean, and Object can all be used.
+- We can combine components to create visual elements in our app like labels, text, and images.
+- We can change properties as necessary to change the behavior of the components. 
 
 ---
 
-### **Milestone 3 🛣🏃**
+#  Review 🤹👨🏻‍🏫🥇🏆🙋‍🧘🏻
+
+- Recognize it's a folder 🗂on our computer containing folders 📂 & files 📄📑 which have different responsibilities 🗝🎉.
+
+- Recognize it's parts ⚙will reflect how other components are built. It will need to import components for use & return 🚪JSX.
+- Recognize it will one day become the [parent component](https://stackoverflow.com/questions/44092105/what-is-the-difference-between-child-and-parent-component-in-angular-2) of all other components in our applications. This will happen through nesting. Some components will be parents 👫 and others will be their children 👨‍👩‍👧‍👦.
+- Recognize that some components are classified as [functional](https://www.robinwieruch.de/react-function-component/). Like functions, the properties/props/params/arguments we pass them will effect their behavior.
