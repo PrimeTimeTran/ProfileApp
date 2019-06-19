@@ -348,7 +348,7 @@ export default function App() {
 }
 ```
 
-![pwd](./assets/images/3e.png)
+![pwd](./assets/images/3d.png)
 We grabbed `Image` from React Native. We nested it inside our single `View` as a child. `Image` has two sibling `Text`s. We also passed `Image` a new type of property we haven't seen before, `source`. What datatype is the property we sent to to Image? What is the shape of it...?
 
 **E)** Let's add all our other details
