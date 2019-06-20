@@ -82,6 +82,6 @@ const styles = StyleSheet.create({
     height: 250,
     borderWidth: 5,
     borderRadius: 125,
-    borderColor: 'lightblue'
+    borderColor: 'green'
   }
 })

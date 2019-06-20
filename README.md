@@ -360,7 +360,7 @@ return (
         Name:
       </Text>
       <Text style={styles.nameStyle}>
-        18
+        Loi Tran
       </Text>
       <Image
         style={{width: 250, height: 250}}
