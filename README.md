@@ -1,12 +1,12 @@
-# Week 1: Hello World in React Native
+# Week 1: Hello World 🌎
 
-## **Introduction 🌟**
+## Introduction 🌟
 
-We're going to build our first mobile app 📱 using [React Native](https://facebook.github.io/react-native/). We'll be using [Expo](https://expo.io/) to make getting started quick. Our app will help us to share information 📋 about ourselves to our friends 🍻🤗💁.
+We're going to build our first mobile app 📱 using [React Native](https://facebook.github.io/react-native/). We'll be using [Expo](https://expo.io/) to move quick. Our app will say hello 👋to not only our friends 🤼‍ & family 👨‍👩‍👧‍👦 but the world 🌎.
 
-![pwd](./assets/images/3e.png)
+![pwd](./assets/images/rockets.png)
 
-### Features 🥅🥇
+### Features 🎯 🥅🥇🏆
 
 - [ ] User can see our name
 - [ ] User can see our age
@@ -17,13 +17,13 @@ We're going to build our first mobile app 📱 using [React Native](https://face
 ### Learning Objectives ✍️📚📝 📈🙌 ️
 
 1. Learn how to create a new mobile app 📱using React Native & Expo:
-    - Recognize it's a folder 🗂on our computer containing folders 📂 & files 📄📑 which have different responsibilities 🗝🎉.
-2. Learn that `App.js` is a component like all other components, albeit, special:
-    - Recognize it's parts ⚙will reflect how other components are built. It will need to import components for use & return 🚪JSX.
+    - Recognize it's one of many folders 🗂on our computer containing additional **folders** 📂 & **files** 📑. These folders and files combine to be the ingredients  🍚🥦🍗🌶of our special order 🥘🍲🍛mobile app 📲.
+2. Learn that `App.js` is a component  like all other components, albeit, special 💎👑:
+    - Recognize it's **composition** 🎶 will demonstrate how to **build** 🏗👷**our own** components.
 3. Learn that nesting components inside of `App.js` is how we'll build all our apps 📱: 
-    - Recognize it will one day become the [parent component](https://stackoverflow.com/questions/44092105/what-is-the-difference-between-child-and-parent-component-in-angular-2) of all other components in our applications. This will happen through nesting. Some components will be parents 👫 and others will be their children 👨‍👩‍👧‍👦.
-4. Learn that passing properties to components changes their behavior the way arguments to a function call change the return value:
-    - Recognize that some components are classified as [functional](https://www.robinwieruch.de/react-function-component/). Like functions, the properties/props/params/arguments we pass them will effect their behavior.
+    - Recognize it will one day become the [parent component](https://stackoverflow.com/questions/44092105/what-is-the-difference-between-child-and-parent-component-in-angular-2) of all other components in our applications. This will happen through **nesting**. Some components will be parents 👫 and others will be their children 👨‍👩‍👧‍👦.
+4. Learn that passing **properties** to components changes their **behavior** the way arguments to a function call change the return value:
+    - Recognize that some components are classified as [functional](https://www.robinwieruch.de/react-function-component/). Like functions, the **properties/props/params/arguments** we pass them will effect their behavior.
 
 No company you work at will expect you to work alone or without the help of resources available. We suggest you work in pairs and Google not only now but in future lessons.
 
@@ -33,7 +33,7 @@ No company you work at will expect you to work alone or without the help of reso
 
 **A)** Open your terminal and navigate to the place you'll want to keep all the apps you'll build in the future saved on your computer. In my case it happens to be:
 
-```
+```terminal
 /Users/primetimetran/Desktop/coderschool
 ```
 
@@ -47,7 +47,7 @@ No company you work at will expect you to work alone or without the help of reso
 
 > 'blank' minimal dependencies to run and an empty root component
 
-and press enter.
+and press `enter`.
 
 **D)** Now enter the name for the project again. This name should reflect what you'd call this on the App & Play stores.
 
@@ -75,20 +75,21 @@ To get started you can type:
 
 
 ---
-> **Tip** 💡: If you run into problems such as the simulator not opening, error messages, etc, refer to the documentation found at [https://docs.expo.io/versions/v33.0.0/introduction/installation/](https://docs.expo.io/versions/v33.0.0/introduction/installation/) and try figuring it out **yourself**. You'll want to know how to do this yourself in the future, trust us. Additionally, a reasonable expectation that your future bosses and teammates will have is that you can **indepdently troubleshoot** problems by **reading publically available documentation** and **following recommended steps**.
+> **Tip** 💡: If you run into problems such as the simulator not opening, error messages, etc, refer to the documentation found at [https://docs.expo.io/versions/v33.0.0/introduction/installation/](https://docs.expo.io/versions/v33.0.0/introduction/installation/) and try figuring it out **yourself**. You'll want to know how to do this yourself in the future, trust us. Additionally, a reasonable expectation that your future teammates and boss will have is that you can **indepdently troubleshoot** problems by **reading publically available documentation** and **following recommended steps**.
 
 ---
-> Key Points 🔑📝
+> **Key Points** 🔑📝
 
 - We can create a new mobile app from the command line. When we run `expo init app-name` Expo creates a folder on our computer  that matches 'app-name' where all the files required for this app are. The **sky** is the limit.
 
 ---
 
-### **Milestone 2 🛣🏃 Open ./App.js in your code editor and famaliarize yourself with it**
+### **Milestone 2 🛣🏃 Open ./App.js in your code editor and examine it**
 
-![App.js](https://i.imgur.com/ldYKvjG.png)
+All your applications will have the `App.js` file/component as the parent of all other components. It came free with React Native. This component is the work of not only the engineers at [Facebook](https://www.facebook.com/) but engineers around the world code.
 
 <details>
+
 <summary>App.js contents</summary>
 
 ```jsx
@@ -115,11 +116,9 @@ const styles = StyleSheet.create({
 
 </details>
 
-Your future applications will have `App.js` file/component as the parent of all other components.
+![App.js](https://i.imgur.com/ldYKvjG.png)
 
-Lets inspect it carefully as an example of how to build other components.
-
-**A)** At the very top we can see the lines:
+**A)** Check out the top section:
 
 ```jsx
 import React from 'react';
@@ -140,9 +139,14 @@ export default function App() {
 }
 ```
 
-There's a few things going on here. We're defining our App `component` as the [default export](https://stackoverflow.com/questions/21117160/what-is-export-default-in-javascript) of this file, `App.js`. The name of the component typically corresponds to the name of the file. Also, we define the body of this component, `App`. It's body returns JSX. There is a `View` component that has a `Text` component nested inside it. This should look familiar to those of you who know html.
+There's a few things going on here
+- They name the component to correspond to the file's name, `App.js`.
+- They define `App` as the [default export](https://stackoverflow.com/questions/21117160/what-is-export-default-in-javascript) of this file, `App.js`.
+- They define the body of `App` with the `{}`.
+- They `return` JSX in the `()`.
+- They have a `View` parent  🤰component that has a child 👼 `Text` component nested.
 
-**C)** We style our application at the bottom. We see that we use StyleSheet's `create()` method and pass it an argument. The argument to it is an object. The object has keys whose values are other objects. This is where we'll style in the future.
+**C)** We style our application at the bottom. We see that we use StyleSheet's `create()` method and pass it an argument. The argument to it is an object. The object has keys whose values are other objects. This is where we'll style 💅.
 
 ```jsx
 const styles = StyleSheet.create({
@@ -156,19 +160,20 @@ const styles = StyleSheet.create({
 ```
 
 ---
-> Key Points 🔑📝
+> **Key Points** 🔑📝
 
-- We can import components for use at the top of most files.
+- We can import components for use at the top of our files.
 - We can create components by writing functions which return JSX.
 - We can nest components inside of one another.
+- We can style our components just like HTML.
 
 ---
 
-### **Milestone 3 🛣🏃 Begin building**
+### **Milestone 3 🛣🏃 Begin building 👷🏗🏭**
 
-Let's get going on building that profile page.
+Let's get going on building that saying hello world.
 
-**A)** Show our name on the app:
+**A)** Print your name to the screen:
 
 ```jsx
 export default function App() {
@@ -198,7 +203,7 @@ export default function App() {
 ```
 
 ![pwd](./assets/images/3b.png)
-Now we've got two sibling components, interesting. Our text is quite small. Also, the two pieces of information are fundamentally different. We should treat them so.
+Now we've got two `sibling` `Text` components, interesting. Our text is quite small. Also, the two pieces of text are fundamentally different in what they're displaying. We should treat them so.
 
 **C)** Change the styling of the `Text` components to reflect their purpose.
 
@@ -231,7 +236,7 @@ export default function App() {
 If you see a screen like this you've done well. You've added a child component to `App.js` of `Text`. There are now two `Text` siblings. We've also passed them `style` props, these props affected the way these components behaved in terms of styling.
 
 ---
-> **Tip** 💡: We'll show you different syntaxes so you know additional techniques.
+> **Tip** 💡: We'll show you different syntaxs so you know additional techniques.
 
 ---
 
@@ -328,7 +333,7 @@ const styles = StyleSheet.create({
 
 </details>
 
-**D)** Add a profile image so the user can see you. Make sure to replace the `uri` part with a publically available image of yourself(I used Facebook).
+**D)** Grab the `Image` component from React Native and add a profile image so the user can see you. Make sure to replace the `uri` part with a publically available image of yourself(I used Facebook).
 
 ```jsx
 export default function App() {
@@ -350,7 +355,7 @@ export default function App() {
 ```
 
 ![pwd](./assets/images/3d.png)
-We grabbed `Image` from React Native. We nested it inside our single `View` as a child. `Image` has two sibling `Text`s. We also passed `Image` a new type of property we haven't seen before, `source`. What datatype is the property we sent to to Image? Can you describe it's shape?
+We grabbed `Image` from React Native. We nested it inside our single `View` as a child. `Image` has two sibling `Text` components. We also passed `Image` a new type of property we haven't seen before, `source`. This prop is passed an object. The object has a key or `uri` where the value is a `String` which is the URL of the image. 
 
 **E)** Add other details about ourselves
 ```jsx
@@ -389,9 +394,10 @@ return (
 ```
 
 ![pwd](./assets/images/3e.png)
-Now the user knows something about us, amazing 🍾🎉. It seems sorta weird the way name and age are so small yet take up an entire row though. Let's fix this in the next step
+Now the user knows something about us, amazing 🍾🎉. It seems weird the way name and age are so small yet take up an entire row though. Let's fix this in the next step
 
-**F)** Make name and age fit on the same row. Add the following to the return of the `App` component:
+**F)** Make name and age fit on the same row using [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). Add the following to the return of the `App` component:
+
 ```jsx
 // ... code ...
   <View 
@@ -419,29 +425,31 @@ Now the user knows something about us, amazing 🍾🎉. It seems sorta weird th
 
 ![pwd](./assets/images/3f.png)
 
-Sweet, so we now know how to layout things top to bottom as well as left to right. Do you know how we could get it to go bottom to top or right to left? If not, then spend a few minutes [watching this video](https://www.youtube.com/watch?v=-xFF5KF-KpE&t=293s). I watched this myself to learn flexbox a few years ago =)
+Sweet, now we know how to layout things top to bottom as well as left to right. Do you know how we could get it to go bottom to top or right to left? If not, then spend a few minutes [watching this video](https://www.youtube.com/watch?v=-xFF5KF-KpE&t=293s). I watched this myself to learn flexbox a few years ago =)
 
 ---
 
-> Key Points 🔑📝
+> **Key Points** 🔑📝
 
-- We can nest components to create visual elements in our app like labels, text, and images.
+- We can nest components to create visual elements in `App.js` like labels, text, and images.
+
 - We can pass properties as necessary to components to change their behavior/layout.
+
 - We can see that different components can receive different props, think about the responsibilities of `source` and `style`.
 
 ---
 
-#  Review 🤹👨🏻‍🏫🥇🏆🙋‍🧘🏻
+## Review 💻🤓🤔
 
 - Any app consists of a folder 🗂on our computer containing folders 📂 & files 📄📑 which have different responsibilities 🗝🎉.
 
-- `App.js` will be a component in every application we build. Looking at it's parts ⚙ helps us understand the basic composition of components.
+- `App.js` will be a component in every app we build. Understanding `App.js`'s parts ⚙ helps us understand the basic composition 🏗 of all future components.
 
 - `App.js` will  one day become the [parent component](https://stackoverflow.com/questions/44092105/what-is-the-difference-between-child-and-parent-component-in-angular-2) of all other components in our applications. This will happen through nesting. Some components will be parents 👫 and others will be their children 👨‍👩‍👧‍👦.
 
-- Understand some components are classified as [functional](https://www.robinwieruch.de/react-function-component/). Like functions, `functional components` accept props/params and will behavior differently on said props/params.
+- Understand some components are classified as [functional](https://www.robinwieruch.de/react-function-component/). Like functions, `functional components` accept props/params and will behave differently due to said props/params.
 
-### Completed Features 🥅🥇
+### Accomplishments 🎯🥇🏆💯
 
 - [X] User can see our name
 - [X] User can see our age
@@ -449,11 +457,38 @@ Sweet, so we now know how to layout things top to bottom as well as left to righ
 - [X] User can see our profile picture
 - [X] User can see where we currently live
 
-### Rockets 🔥🚀
+### Rockets 🚀
 
-- [ ] Make this your React Native Hello World by adding this text to the top.
+- [ ] Make this your Hello World to React Native.
 - [ ] Make the avatar circular and give it some additional styling such as a border.
-- [ ] Space out the 'Hello World', avatar, and descriptions to maximize valuable screenspace.
+- [ ] Space out the 'Hello World', avatar, and descriptions to maximize use of valuable screenspace.
+- [ ] Build your own `Description` component above `App.js`. Nest/Render it inside of `App.js`
+
+<details>
+
+<summary>Hint</summary>
+
+```jsx
+const Description = () => {
+  return (
+    <View 
+      style={{ 
+        margin: 10,
+        height: 100, 
+        padding: 10,
+        width: '90%',
+        borderWidth: 3, 
+        borderColor: 'red', 
+      }}
+    >
+      <Text style={styles.labelStyle}>Description</Text>
+      <Text>I like writing code 💻 and building mobile apps 📲</Text>
+    </View>
+  )
+}
+```
+
+</details>
 
 ##### It should look like this
 ![pwd](./assets/images/rockets.png)
