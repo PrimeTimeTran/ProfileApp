@@ -1,4 +1,4 @@
-# Week 2 Homework - **Hello World Profile App 🌎**
+# WK2 - HW - **Hello World Profile App 🌎**
 
 ## Introduction 🌟
 
