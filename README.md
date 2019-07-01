@@ -1,24 +1,24 @@
-# Week 1: Hello World 🌎
+# Week 2 Homework - **Hello World Profile App 🌎**
 
 ## Introduction 🌟
 
-We're going to build our first mobile app 📱 using [React Native](https://facebook.github.io/react-native/). We'll be using [Expo](https://expo.io/) to move quick. Our app will say hello 👋to not only our friends 🤼‍ & family 👨‍👩‍👧‍👦 but the world 🌎.
+We're going to build our first mobile app 📱 using [React Native](https://facebook.github.io/react-native/). We'll be using [Expo](https://expo.io/) to move quick 🏎️. Our app will say hello 🙋‍to not only our friends 🤼‍ & family 👨‍👩‍👧‍👦 but the world 🌎.
 
 ![pwd](./assets/images/rockets.png)
 
-### Features 🎯 🥅🥇🏆
+### Features 🎯🥇🏆
 
-- [ ] User can see our name
-- [ ] User can see our age
-- [ ] User can see our birthday
-- [ ] User can see our profile picture
-- [ ] User can see where we currently live
+- [ ] User can see our name.
+- [ ] User can see our age.
+- [ ] User can see our birthday.
+- [ ] User can see our profile picture.
+- [ ] User can see where we currently live.
 
-### Learning Objectives ✍️📚📝 📈🙌 ️
+### Learning Objectives ✍️📚📝
 
 1. Learn how to create a new mobile app 📱using React Native & Expo:
-    - Recognize it's one of many folders 🗂on our computer containing additional **folders** 📂 & **files** 📑. These folders and files combine to be the ingredients  🍚🥦🍗🌶of our special order 🥘🍲🍛mobile app 📲.
-2. Learn that `App.js` is a component  like all other components, albeit, special 💎👑:
+    - Recognize it's one of many folders 🗂on our computer containing additional **folders** 📂 & **files** 📑. These folders and files combine to be the **ingredients**  🍚🥦🍗🌶of our mobile app 📲 **receipe** 🥘🍲🍛.
+2. Learn that `App.js` is a component like all other components, albeit, special 👑:
     - Recognize it's **composition** 🎶 will demonstrate how to **build** 🏗👷**our own** components.
 3. Learn that nesting components inside of `App.js` is how we'll build all our apps 📱: 
     - Recognize it will one day become the [parent component](https://stackoverflow.com/questions/44092105/what-is-the-difference-between-child-and-parent-component-in-angular-2) of all other components in our applications. This will happen through **nesting**. Some components will be parents 👫 and others will be their children 👨‍👩‍👧‍👦.
@@ -27,7 +27,7 @@ We're going to build our first mobile app 📱 using [React Native](https://face
 
 No company you work at will expect you to work alone or without the help of resources available. We suggest you work in pairs and Google not only now but in future lessons.
 
-> **Tip** 💡: The links provided in the introduction of all lessons will provide valuable information to you in class and your careers. It isn't a bad idea to spend a few minutes reading about these tools to understand how they fit together.
+> **Tip** 💡: The links provided throughout all lessons will provide valuable information to you in class and your careers. It isn't a bad idea to spend a few minutes reading them before moving forward.
 
 ### **Milestone 1 🛣🏃 Create project directory and run application locally using Expo and simulator**
 
@@ -86,7 +86,7 @@ To get started you can type:
 
 ### **Milestone 2 🛣🏃 Open ./App.js in your code editor and examine it**
 
-All your applications will have the `App.js` file/component as the parent of all other components. It came free with React Native. This component is the work of not only the engineers at [Facebook](https://www.facebook.com/) but engineers around the world code.
+All your applications will have the `App.js` file/component as the parent of all other components. It came free with React Native. This component is the work of not only the engineers at [Facebook](https://www.facebook.com/) but engineers around the world.
 
 <details>
 
@@ -125,7 +125,9 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 ```
 
-These lines use [ES6 import, export, and default syntax](https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f) to grab React and some components provided for free from React Native. We could also import additional components that are part of React Native, our own custom components, and components from public libraries such as open source projects.
+These lines use [ES6 import, export, and default syntax](https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f) to grab React and some components provided for free from React Native.
+
+We could additionally import additional components that are part of React Native, spoiler, `Image`, our own custom components, and components from public libraries such as open source projects.
 
 **B)** We can see the definition of our `App` component here:
 
@@ -139,7 +141,7 @@ export default function App() {
 }
 ```
 
-There's a few things going on here
+The team has done a few things here.
 - They name the component to correspond to the file's name, `App.js`.
 - They define `App` as the [default export](https://stackoverflow.com/questions/21117160/what-is-export-default-in-javascript) of this file, `App.js`.
 - They define the body of `App` with the `{}`.
@@ -425,7 +427,7 @@ Now the user knows something about us, amazing 🍾🎉. It seems weird the way 
 
 ![pwd](./assets/images/3f.png)
 
-Sweet, now we know how to layout things top to bottom as well as left to right. Do you know how we could get it to go bottom to top or right to left? If not, then spend a few minutes [watching this video](https://www.youtube.com/watch?v=-xFF5KF-KpE&t=293s). I watched this myself to learn flexbox a few years ago =)
+Sweet, now we know how to layout things top to bottom as well as left to right. Do you know how we could get it to go bottom to top or right to left? If not, then spend a few minutes [watching this video](https://www.youtube.com/watch?v=-xFF5KF-KpE&t=293s). The author watched it himself as a young programmer =)
 
 ---
 
@@ -443,26 +445,26 @@ Sweet, now we know how to layout things top to bottom as well as left to right. 
 
 - Any app consists of a folder 🗂on our computer containing folders 📂 & files 📄📑 which have different responsibilities 🗝🎉.
 
-- `App.js` will be a component in every app we build. Understanding `App.js`'s parts ⚙ helps us understand the basic composition 🏗 of all future components.
+- `App.js` will be a component in every app we build. Understanding `App.js`'s composition 🎹🎼 helps us understand the building blocks 👷‍🏗 of all future components.
 
-- `App.js` will  one day become the [parent component](https://stackoverflow.com/questions/44092105/what-is-the-difference-between-child-and-parent-component-in-angular-2) of all other components in our applications. This will happen through nesting. Some components will be parents 👫 and others will be their children 👨‍👩‍👧‍👦.
+- `App.js` will  one day become the [parent 👩‍👧](https://stackoverflow.com/questions/44092105/what-is-the-difference-between-child-and-parent-component-in-angular-2) component of all other components in our applications. This will happen through nesting. Some components will be parents 👫 and others will be their children 👨‍👩‍👧‍👦.
 
 - Understand some components are classified as [functional](https://www.robinwieruch.de/react-function-component/). Like functions, `functional components` accept props/params and will behave differently due to said props/params.
 
-### Accomplishments 🎯🥇🏆💯
+### Accomplishments 🥇🏆💯
 
-- [X] User can see our name
-- [X] User can see our age
-- [X] User can see our birthday
-- [X] User can see our profile picture
-- [X] User can see where we currently live
+- [X] User can see our name.
+- [X] User can see our age.
+- [X] User can see our birthday.
+- [X] User can see our profile picture.
+- [X] User can see where we currently live.
 
 ### Rockets 🚀
 
-- [ ] Make this your Hello World to React Native.
+- [ ] Make this your Hello World to React Native. Add a title to your App.
 - [ ] Make the avatar circular and give it some additional styling such as a border.
-- [ ] Space out the 'Hello World', avatar, and descriptions to maximize use of valuable screenspace.
-- [ ] Build your own `Description` component above `App.js`. Nest/Render it inside of `App.js`
+- [ ] Space out the 'Hello World', avatar, & info to maximize use of valuable screenspace.
+- [ ] Add a description. Write/build your very own `Description` component above `App.js` by nesting other components in it. Style it by passing props. Nest/Render it inside of `App.js`.
 
 <details>
 
@@ -471,14 +473,14 @@ Sweet, now we know how to layout things top to bottom as well as left to right. 
 ```jsx
 const Description = () => {
   return (
-    <View 
-      style={{ 
+    <View
+      style={{
         margin: 10,
-        height: 100, 
+        height: 100,
         padding: 10,
         width: '90%',
-        borderWidth: 3, 
-        borderColor: 'red', 
+        borderWidth: 3,
+        borderColor: 'red',
       }}
     >
       <Text style={styles.labelStyle}>Description</Text>
